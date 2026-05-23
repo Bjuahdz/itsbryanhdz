@@ -1,5 +1,7 @@
 # Portfolio Website
 
+**Live site:** [itsbryanhdz.vercel.app](https://itsbryanhdz.vercel.app/)
+
 Personal portfolio for [Bryan Juarez Hernandez](https://github.com/Bjuahdz) — an archive-style site built with React, Vite, TypeScript, and Tailwind CSS v4.
 
 The **home page** (`/`) scrolls through projects, experience, education, about, and contact. **Full-page routes** provide a project dossier (`/projects`) and blog (`/blog`). Section links use hash URLs (`/#projects`, `/#contact`, etc.) with smooth scrolling.
@@ -13,7 +15,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173).
+Open [http://localhost:5173](http://localhost:5173) for local development. Production builds match what runs on [Vercel](https://itsbryanhdz.vercel.app/).
 
 ### Quality checks
 
@@ -36,6 +38,8 @@ npm run preview   # optional — preview dist/ locally
 | `npm run test:watch` | Run Vitest in watch mode |
 
 ## Site map
+
+Production base URL: [https://itsbryanhdz.vercel.app](https://itsbryanhdz.vercel.app)
 
 | Path | What it shows |
 | ---- | ------------- |
@@ -142,12 +146,44 @@ public/
 | Icons | [Lucide](https://lucide.dev/) (UI), [react-icons](https://react-icons.github.io/react-icons/) (tech brands) |
 | Animation | [GSAP](https://gsap.com/) + [Motion](https://motion.dev/) |
 | Tests | [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/) |
+| Hosting | [Vercel](https://vercel.com/) |
+
+## Deployment
+
+The site is deployed on **Vercel** at [https://itsbryanhdz.vercel.app/](https://itsbryanhdz.vercel.app/).
+
+Vercel works out of the box with this repo:
+
+| Setting | Value |
+| ------- | ----- |
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Install command | `npm install` |
+
+Pushes to the connected Git branch trigger a new production deploy. Preview deployments are created for pull requests when the Git integration is enabled.
+
+### GitHub Actions CI
+
+Every push and pull request to `main` (or `master`) runs [`.github/workflows/ci.yml`](.github/workflows/ci.yml):
+
+1. `npm ci`
+2. `npm run lint`
+3. `npm run test`
+4. `npm run build`
+
+Check results under the **Actions** tab on GitHub. Optional: in **Settings → Branches**, require the **CI** check to pass before merging pull requests.
+
+To verify a build locally before deploying:
+
+```bash
+npm run build
+npm run preview
+```
 
 ## Possible next steps
 
 Not required to run the site; useful when polishing:
 
-- Initial git push and GitHub Actions (`lint`, `test`, `build`)
 - Open Graph / Twitter meta tags in `index.html`
 - Code-split `/projects` and `/blog` for a smaller home bundle
 - Consolidate to one animation library (GSAP or Motion)
