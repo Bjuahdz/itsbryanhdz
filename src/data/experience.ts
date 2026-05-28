@@ -8,7 +8,7 @@ export const experienceEvents: ExperienceEvent[] = [
     title: 'Production Support - South Atlanta Mechanical',
     titleHighlight: 'South Atlanta Mechanical',
     summary:
-      'Shop-floor support for precision metal bending and custom fabrication, keeping inventory, equipment, and client deliveries moving on schedule.',
+      'Shop-floor support for precision metal bending and custom fabrication, helping coordinate inventory, equipment upkeep, and client deliveries.',
     summaryHighlights: ['precision metal bending', 'custom fabrication'],
     details: [
       {
@@ -16,11 +16,11 @@ export const experienceEvents: ExperienceEvent[] = [
         highlight: 'client accounts',
       },
       {
-        text: 'Tracked stock levels and equipment upkeep so daily production stayed predictable.',
-        highlight: 'stock levels',
+        text: 'Coordinated inventory control and equipment upkeep to help maintain smooth daily operations.',
+        highlight: 'inventory control',
       },
       {
-        text: 'Coordinated finished-part deliveries to client sites across the metro area.',
+        text: 'Organized timely delivery of fabricated parts to client sites.',
         highlight: 'deliveries',
       },
     ],
@@ -32,20 +32,20 @@ export const experienceEvents: ExperienceEvent[] = [
     title: 'Lead Merchandiser - Plant Partners',
     titleHighlight: 'Plant Partners',
     summary:
-      'Seasonal lead for retail merchandising crews, balancing vendor coordination, staff training, and inventory reporting.',
+      'Seasonal lead for retail merchandising crews, supporting vendor coordination, staff training, scheduling, and inventory reporting.',
     summaryHighlights: ['retail merchandising crews'],
     details: [
       {
-        text: 'Aligned vendor deliveries with store schedules so displays stayed stocked.',
-        highlight: 'vendor deliveries',
+        text: 'Coordinated with vendors and staff to schedule and procure products.',
+        highlight: 'vendors and staff',
       },
       {
-        text: 'Helped hire, onboard, train, and retain seasonal merchandisers across locations.',
+        text: 'Assisted with recruiting, onboarding, training, and retention of seasonal merchandisers.',
         highlight: 'train',
       },
       {
-        text: 'Maintained inventory logs and reports managers could pull on demand.',
-        highlight: 'reports',
+        text: 'Maintained product inventory logs and up-to-date filing reports available upon request.',
+        highlight: 'inventory logs',
       },
     ],
   },
@@ -56,15 +56,15 @@ export const experienceEvents: ExperienceEvent[] = [
     title: 'FOH Team Member - Red Lobster',
     titleHighlight: 'Red Lobster',
     summary:
-      'Front-of-house role in a high-volume dining room, keeping payment, table, and guest workflows steady under pressure.',
+      'Front-of-house role in a high-volume dining room, supporting payment, guest service, and team communication workflows.',
     summaryHighlights: ['high-volume dining room'],
     details: [
       {
-        text: 'Handled cash, card, and check payments accurately through busy rushes.',
+        text: 'Handled cash, card, and check payments accurately while supporting front-of-house workflows.',
         highlight: 'payments',
       },
       {
-        text: 'Coordinated table needs while serving 40+ guests per shift.',
+        text: 'Communicated with guests and team members to provide quality service to 40+ guests per shift.',
         highlight: '40+ guests',
       },
     ],
@@ -76,7 +76,7 @@ export const experienceEvents: ExperienceEvent[] = [
     title: 'Home Restoration Assistant - Contractor',
     titleHighlight: 'Home Restoration',
     summary:
-      'Early role on residential rehab projects, supporting estimates, planning details, and client communication.',
+      'Residential project support role focused on preconstruction estimates, take-offs, practical problem solving, and client communication.',
     summaryHighlights: ['residential rehab projects'],
     details: [
       {
@@ -84,12 +84,12 @@ export const experienceEvents: ExperienceEvent[] = [
         highlight: 'estimate inputs',
       },
       {
-        text: 'Handled client questions on-site with clear communication.',
-        highlight: 'client questions',
+        text: 'Communicated with clients on-site and provided service-focused support.',
+        highlight: 'clients',
       },
       {
-        text: 'Troubleshot project details when timelines or site conditions changed.',
-        highlight: 'Troubleshot',
+        text: 'Assisted with preparing practical solutions in a fast-paced project environment.',
+        highlight: 'practical solutions',
       },
     ],
   },

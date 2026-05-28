@@ -75,7 +75,7 @@ Other static assets:
 | Asset | Path | Referenced in |
 | ----- | ---- | ------------- |
 | Portrait | `public/images/grad_photo.png` | `site.avatarUrl` |
-| Resume PDF | `public/resume/Bryan-Juarez-Hernandez-Resume.pdf` | `site.resumeUrl` |
+| Resume PDF | `public/resume/Bryan_Juarez_Resume.pdf` | `site.resumeUrl` |
 | Phone frame | `public/images/phone_frame.png` | spine gallery (mobile layout) |
 | Favicon | `public/favicon.svg` | `index.html` |
 

@@ -13,7 +13,7 @@ export const education = [
     title: 'Kennesaw State University',
     institution: 'B.S. Computer Science',
     summary:
-      'Completed the degree with practical software work across data systems, automation, user interfaces, and product-minded implementation.',
+      'Completed computer science coursework spanning software engineering, data communications, data structures, operating systems, database systems, modeling and simulation, and user interface engineering.',
   },
 ]
 
