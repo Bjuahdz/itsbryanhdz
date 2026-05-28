@@ -1,7 +1,7 @@
+import { useEffect } from 'react'
 import { Footer } from './components/layout/Footer'
 import { ArchiveLayout } from './components/layout/ArchiveLayout'
 import { SiteBackground } from './components/layout/SiteBackground'
-import { Blog } from './components/sections/Blog'
 import { Contact } from './components/sections/Contact'
 import { Experience } from './components/sections/Experience'
 import { HomeProjects } from './components/sections/HomeProjects'
@@ -11,12 +11,21 @@ import { Projects } from './components/sections/Projects'
 import { usePathname } from './hooks/usePathname'
 import { useScrollToHomeHash } from './hooks/useScrollToHomeHash'
 
+function resolveAppPath(pathname: string) {
+  if (pathname === '/projects') return '/projects'
+  return '/'
+}
+
 function App() {
   const pathname = usePathname()
-  const normalizedPath =
-    pathname === '/projects' || pathname === '/blog'
-      ? pathname
-      : '/'
+  const normalizedPath = resolveAppPath(pathname)
+
+  useEffect(() => {
+    if (window.location.pathname === '/blog') {
+      window.history.replaceState({}, '', '/')
+      window.dispatchEvent(new Event('pushstate'))
+    }
+  }, [pathname])
 
   useScrollToHomeHash(normalizedPath === '/')
 
@@ -27,8 +36,6 @@ function App() {
         <main className="relative">
           {normalizedPath === '/projects' ? (
             <Projects />
-          ) : normalizedPath === '/blog' ? (
-            <Blog />
           ) : (
             <>
               <HomeProjects />

@@ -21,18 +21,13 @@ export function Projects({ id = 'projects' }: ProjectsProps) {
 
   return (
     <section id={id} className="scroll-mt-8 border-b border-(--color-border) py-10 lg:py-14">
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-end lg:gap-8">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-(--color-accent)">
-            Selected Work
-          </p>
-          <h2 className="mt-3 font-serif text-3xl leading-tight text-(--color-heading) sm:text-4xl">
-            Technical dossier
-          </h2>
-        </div>
-        <p className="max-w-sm text-sm leading-6 text-(--color-text) lg:text-right">
-          Practical builds across mobile product work, automation, and usable technical systems.
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-(--color-accent)">
+          Selected Work
         </p>
+        <h2 className="mt-3 font-serif text-3xl leading-tight text-(--color-heading) sm:text-4xl">
+          Technical dossier
+        </h2>
       </div>
 
       {featuredProject ? <FeaturedProject project={featuredProject} /> : null}

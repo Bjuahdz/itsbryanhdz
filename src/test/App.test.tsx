@@ -15,12 +15,8 @@ describe('App', () => {
     expect(screen.getByRole('link', { name: 'Go to education' })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Go to projects' })).toHaveAttribute('href', '/#projects')
     expect(screen.getByRole('link', { name: 'Go to experience timeline' })).toBeInTheDocument()
-    expect(screen.queryByRole('link', { name: 'Go to blog' })).not.toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Go to contact' })).toBeInTheDocument()
     expect(screen.getAllByRole('link', { name: 'View all projects' }).length).toBeGreaterThanOrEqual(1)
-    expect(screen.queryByRole('link', { name: 'View all blog posts' })).not.toBeInTheDocument()
-    expect(screen.queryByRole('link', { name: 'Journal' })).not.toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Blog' })).toHaveAttribute('href', '/blog')
     expect(screen.getByRole('button', { name: 'Switch to dark mode' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Get in touch' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Send message' })).toBeInTheDocument()
@@ -43,7 +39,6 @@ describe('App', () => {
     expect(screen.queryByRole('heading', { name: 'Why an action-based Plaid API kept our mobile flow simple' })).not.toBeInTheDocument()
     expect(document.getElementById('projects')).toBeInTheDocument()
     expect(document.querySelector('#projects .skill-strip-static')).not.toBeInTheDocument()
-    expect(document.getElementById('blog')).not.toBeInTheDocument()
     expect(document.getElementById('experience')).toBeInTheDocument()
     expect(document.getElementById('contact')).toBeInTheDocument()
   })
@@ -69,12 +64,11 @@ describe('App', () => {
     expect(document.getElementById('projects')).toBeInTheDocument()
   })
 
-  it('renders blog as a separate page', () => {
+  it('redirects legacy /blog URLs to the home page', () => {
     window.history.pushState({}, '', '/blog')
     render(<App />)
 
-    expect(screen.getByRole('heading', { name: 'Notes and point of view' })).toBeInTheDocument()
-    expect(document.getElementById('blog')).toBeInTheDocument()
+    expect(window.location.pathname).toBe('/')
+    expect(document.getElementById('home-hero')).toBeInTheDocument()
   })
-
 })

@@ -1,12 +1,10 @@
-import { site } from '../../data/site'
-import { socials } from '../../data/site'
+import { site, socials } from '../../data/site'
 import { AppLink } from '../ui/AppLink'
-import { GitHubIcon, InstagramIcon, LinkedInIcon } from '../ui/BrandIcons'
+import { GitHubIcon, LinkedInIcon } from '../ui/BrandIcons'
 
 function SocialIcon({ icon, className }: { icon: string; className: string }) {
   if (icon === 'github') return <GitHubIcon className={className} />
   if (icon === 'linkedin') return <LinkedInIcon className={className} />
-  if (icon === 'instagram') return <InstagramIcon className={className} />
 
   return null
 }
@@ -25,11 +23,6 @@ export function Footer() {
             <li>
               <AppLink href="/projects" className="inline-flex transition hover:text-(--color-accent)">
                 Projects
-              </AppLink>
-            </li>
-            <li>
-              <AppLink href="/blog" className="inline-flex transition hover:text-(--color-accent)">
-                Blog
               </AppLink>
             </li>
             {socials.map((link) => (

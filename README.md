@@ -4,7 +4,7 @@
 
 Personal portfolio for [Bryan Juarez Hernandez](https://github.com/Bjuahdz) — an archive-style site built with React, Vite, TypeScript, and Tailwind CSS v4.
 
-The **home page** (`/`) scrolls through projects, experience, education, about, and contact. **Full-page routes** provide a project dossier (`/projects`) and blog (`/blog`). Section links use hash URLs (`/#projects`, `/#contact`, etc.) with smooth scrolling.
+The **home page** (`/`) scrolls through projects, experience, education, about, and contact. **Full-page route:** project dossier (`/projects`). Section links use hash URLs (`/#projects`, `/#contact`, etc.) with smooth scrolling.
 
 ## Getting started
 
@@ -46,8 +46,6 @@ Production base URL: [https://itsbryanhdz.vercel.app](https://itsbryanhdz.vercel
 | `/` | Home: hero, project spine gallery, experience, education, about, contact |
 | `/#projects`, `/#experience`, … | Hash links scroll to home sections (sidebar + hero CTA) |
 | `/projects` | Full technical dossier for all projects |
-| `/blog` | Project notes and field notes |
-
 Navigation uses client-side routing via [`AppLink`](src/components/ui/AppLink.tsx) (`history.pushState`) — no React Router. External links and modifier-key clicks behave like normal anchors.
 
 ## Customize your content
@@ -60,7 +58,6 @@ Edit data files first; layout components rarely need changes for copy or portfol
 | [`src/data/projects.ts`](src/data/projects.ts) | Projects (title, description, tech, outcomes, links, media) |
 | [`src/data/experience.ts`](src/data/experience.ts) | Experience timeline events |
 | [`src/data/profile.ts`](src/data/profile.ts) | Education entries and certificates |
-| [`src/data/blog.ts`](src/data/blog.ts) | Blog posts |
 | [`src/data/skillBrandColors.ts`](src/data/skillBrandColors.ts) | Brand colors for skill chips and tech dock icons |
 | [`index.html`](index.html) | Document `<title>` and meta description |
 
@@ -86,7 +83,7 @@ Other static assets:
 
 ```
 src/
-├── App.tsx                 Route switch (home / projects / blog)
+├── App.tsx                 Route switch (home / projects)
 ├── main.tsx                Entry + theme bootstrap (no flash)
 ├── index.css               Global styles and design tokens
 ├── components/
@@ -99,7 +96,7 @@ src/
 │   │   ├── HomeProjects    Spine gallery wrapper
 │   │   ├── ProjectSpineGallery
 │   │   ├── Projects        /projects dossier
-│   │   ├── Experience, Education, AboutMe, Contact, Blog
+│   │   ├── Experience, Education, AboutMe, Contact
 │   │   └── SkillStrip
 │   ├── ui/
 │   │   ├── AppLink         Client-side nav + hash scroll
@@ -128,7 +125,7 @@ public/
 ## Features
 
 - **Archive layout** — sticky sidebar: section nav, Georgia location map, profile links, footer actions
-- **Sidebar CTAs** — primary **Contact Me**; **Resume** + theme toggle on one row (after scrolling past the home hero, or on `/projects` / `/blog`)
+- **Sidebar CTAs** — primary **Contact Me**; **Resume** + theme toggle on one row (after scrolling past the home hero, or on `/projects`)
 - **Home hero** — typed name and rotating brief phrases ([React Bits](https://reactbits.dev) `TextType` + GSAP)
 - **Project spine gallery** — interactive home preview; `/projects` is the full dossier
 - **Experience highlights** — `ShinyText` on timeline copy (Motion)
@@ -179,12 +176,3 @@ To verify a build locally before deploying:
 npm run build
 npm run preview
 ```
-
-## Possible next steps
-
-Not required to run the site; useful when polishing:
-
-- Open Graph / Twitter meta tags in `index.html`
-- Code-split `/projects` and `/blog` for a smaller home bundle
-- Consolidate to one animation library (GSAP or Motion)
-- Split `index.css` into smaller files as styles grow

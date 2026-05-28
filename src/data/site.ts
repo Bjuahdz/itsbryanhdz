@@ -55,9 +55,4 @@ export const socials: SocialLink[] = [
     href: 'https://www.linkedin.com/in/bryan-juarez-hernandez-54147822a',
     icon: 'linkedin',
   },
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/offbrynd/',
-    icon: 'instagram',
-  },
 ]

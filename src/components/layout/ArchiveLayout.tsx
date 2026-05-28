@@ -11,7 +11,7 @@ import {
 import { ResumeDownloadButton } from '../ui/ResumeDownloadButton'
 import { SidebarContactButton } from '../ui/SidebarContactButton'
 import { AppLink } from '../ui/AppLink'
-import { GitHubIcon, InstagramIcon, LinkedInIcon } from '../ui/BrandIcons'
+import { GitHubIcon, LinkedInIcon } from '../ui/BrandIcons'
 import { SidebarThemeToggle } from '../ui/SidebarThemeToggle'
 import { Hero } from './Hero'
 
@@ -50,7 +50,6 @@ const GEORGIA_COAST_PATH =
 function SocialIcon({ icon, className }: { icon: string; className: string }) {
   if (icon === 'github') return <GitHubIcon className={className} />
   if (icon === 'linkedin') return <LinkedInIcon className={className} />
-  if (icon === 'instagram') return <InstagramIcon className={className} />
 
   return null
 }
@@ -115,7 +114,7 @@ export function ArchiveLayout({ children, pathname }: ArchiveLayoutProps) {
         : null
 
   useEffect(() => {
-    if (pathname === '/projects' || pathname === '/blog') {
+    if (pathname === '/projects') {
       return
     }
 

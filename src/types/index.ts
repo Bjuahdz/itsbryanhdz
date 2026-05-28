@@ -38,5 +38,5 @@ export type ExperienceEvent = {
 export type SocialLink = {
   label: string
   href: string
-  icon: 'github' | 'linkedin' | 'instagram'
+  icon: 'github' | 'linkedin'
 }

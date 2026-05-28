@@ -28,19 +28,6 @@ export function LinkedInIcon({ className }: IconProps) {
   )
 }
 
-export function InstagramIcon({ className }: IconProps) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden
-    >
-      <path d="M7.8 0h8.4C20.5 0 24 3.5 24 7.8v8.4c0 4.3-3.5 7.8-7.8 7.8H7.8C3.5 24 0 20.5 0 16.2V7.8C0 3.5 3.5 0 7.8 0zm-.3 2.4c-2.8 0-5.1 2.3-5.1 5.1v9c0 2.8 2.3 5.1 5.1 5.1h9c2.8 0 5.1-2.3 5.1-5.1v-9c0-2.8-2.3-5.1-5.1-5.1h-9zm10.3 3.3a1.5 1.5 0 1 1 0 3.1 1.5 1.5 0 0 1 0-3.1zM12 5.8a6.2 6.2 0 1 1 0 12.4A6.2 6.2 0 0 1 12 5.8zm0 2.4a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6z" />
-    </svg>
-  )
-}
-
 export function XIcon({ className }: IconProps) {
   return (
     <svg
