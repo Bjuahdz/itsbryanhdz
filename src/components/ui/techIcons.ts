@@ -1,9 +1,10 @@
-import { Bot, ChartNoAxesCombined, FileSpreadsheet, Landmark } from 'lucide-react'
+import { Bot, ChartNoAxesCombined, FileSpreadsheet, Landmark, Presentation } from 'lucide-react'
 import type { IconType } from 'react-icons'
 import {
   SiAppwrite,
   SiCss,
   SiExpo,
+  SiFigma,
   SiGit,
   SiHtml5,
   SiJavascript,
@@ -12,10 +13,8 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiOpenjdk,
-  SiOpenai,
   SiPostgresql,
   SiPython,
-  SiPytorch,
   SiReact,
   SiShopify,
   SiSharp,
@@ -28,6 +27,7 @@ export const techIcons: Record<string, IconType> = {
   Appwrite: SiAppwrite,
   CSS: SiCss,
   Expo: SiExpo,
+  Figma: SiFigma,
   Git: SiGit,
   HTML: SiHtml5,
   Java: SiOpenjdk,
@@ -36,10 +36,8 @@ export const techIcons: Record<string, IconType> = {
   Mapbox: SiMapbox,
   'Next.js': SiNextdotjs,
   'Node.js': SiNodedotjs,
-  'OpenAI API': SiOpenai,
   PostgreSQL: SiPostgresql,
   Python: SiPython,
-  PyTorch: SiPytorch,
   React: SiReact,
   'React Native': SiReact,
   Shopify: SiShopify,
@@ -54,6 +52,7 @@ export const customTechIcons: Record<string, IconType> = {
   Matplotlib: ChartNoAxesCombined,
   'MS Office': FileSpreadsheet,
   Plaid: Landmark,
+  PowerPoint: Presentation,
 }
 
 export function hasTechIcon(name: string) {

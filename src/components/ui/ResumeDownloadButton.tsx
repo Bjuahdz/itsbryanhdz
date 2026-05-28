@@ -1,7 +1,7 @@
 import { FileDown } from 'lucide-react'
 import { site } from '../../data/site'
 
-const resumeFilename = 'Bryan-Juarez-Hernandez-Resume.pdf'
+const resumeFilename = 'Bryan_Juarez_Resume.pdf'
 
 type ResumeDownloadButtonProps = {
   className?: string
